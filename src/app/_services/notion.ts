@@ -22,7 +22,8 @@ export async function getPosts() {
       slug: posts.properties.Slug.formula.string,
       createdat : posts.last_edited_time,
       description : posts.properties.Description.rich_text[0].text.content,
-      tag : posts.properties.tags.multi_select.map((tag)=> tag.name)
+      tag : posts.properties.tags.multi_select.map((tag)=> tag.name),
+      published : posts.properties.Published.checkbox,
     }
   })
 
