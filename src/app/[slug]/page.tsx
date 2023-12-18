@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { getPost } from "@/app/_services/notion";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -5,6 +6,24 @@ import {
 
   nord,
 } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
+ 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  // read route params
+  const id = params.slug
+ 
+  const post = await getPost(params.slug);
+ 
+  return {
+    title: post.title,
+    description:post.description,
+   
+  }
+}
 
 export default async function BlogPost({
   params,

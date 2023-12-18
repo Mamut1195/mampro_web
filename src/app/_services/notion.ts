@@ -26,6 +26,7 @@ export async function getPosts() {
     }
   })
 
+
 }
 
 export async function getPost(Slug: string) {
@@ -45,7 +46,7 @@ export async function getPost(Slug: string) {
 
   const pageId = response.results[0].id;
 
-  console.log(pageId)
+
 
   const n2m = new NotionToMarkdown({ notionClient: notion });
 
@@ -58,6 +59,7 @@ export async function getPost(Slug: string) {
   return {
     title: typedResponse.results[0].properties.name.title[0].plain_text,
     content: mdString.parent,
+    description:typedResponse.results[0].properties.Description.rich_text[0].text.content
     
   };
   
