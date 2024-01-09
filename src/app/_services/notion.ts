@@ -65,3 +65,8 @@ export async function getPost(Slug: string) {
   };
   
 }
+
+(async () => {
+  const posts = await getPosts();
+  console.log(posts); // Puedes hacer lo que necesites con los posts, como almacenarlos en el estado de tu aplicación
+})();
