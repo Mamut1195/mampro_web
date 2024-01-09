@@ -18,9 +18,9 @@ function Navbar() {
     ]
     return (
         <div className='sticky top-0 flex justify-between align-middle items-center py-2 bg-indigo-950  px-4 rounded-b-xl md:py-4 md:text-lg font-semibold z-10 animate-from-top'>
-            <div className='opacity-90  '>
+            <Link  href={'/'}>
                 MAMPRO BLOG
-            </div>
+            </Link>
             <div className='opacity-80 flex'>
                 {items.map((item) => <ul key={item.name}>
 
