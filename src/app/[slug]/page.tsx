@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { getPost } from "@/app/_services/notion";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import {
+// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+// import {
 
-  nord,
-} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+//   nord,
+// } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
  
 export async function generateMetadata({
@@ -64,22 +64,22 @@ export default async function BlogPost({
             blockquote: ({ node, ...props }) => (
               <blockquote className="p-4 my-5 mx-2 border-s-4  bg-blue-900 bg-opacity-20 font-sans font-medium opacity-80" {...props} />
             ),
-            code({ node, inline, className, children, ...props }) {
-              const match = /language-(\w+)/.exec(className || '')
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  // eslint-disable-next-line react/no-children-prop
-                  children={String(children).replace(/\n$/, '')}
-                  language={match[1]}
-                  style={nord}
-                  {...props}
-                />
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              )
-            },
+            // code({ node, inline, className, children, ...props }) {
+            //   const match = /language-(\w+)/.exec(className || '')
+            //   return !inline && match ? (
+            //     <SyntaxHighlighter
+            //       // eslint-disable-next-line react/no-children-prop
+            //       children={String(children).replace(/\n$/, '')}
+            //       language={match[1]}
+            //       style={nord}
+            //       {...props}
+            //     />
+            //   ) : (
+            //     <code className={className} {...props}>
+            //       {children}
+            //     </code>
+            //   )
+            // },
             
           }}
         >
