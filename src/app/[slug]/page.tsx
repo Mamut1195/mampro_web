@@ -90,12 +90,3 @@ export default async function BlogPost({
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const post = await getPost(params.slug);
-
-  return {
-    props: {
-      post,
-    },
-  };
-}
