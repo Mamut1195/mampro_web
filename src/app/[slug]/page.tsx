@@ -26,7 +26,7 @@ export async function generateMetadata({
 }
 
 export default async function BlogPost({
-  params,
+  params, 
 }: {
   params: { slug: string };
 }) {
@@ -88,4 +88,14 @@ export default async function BlogPost({
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  const post = await getPost(params.slug);
+
+  return {
+    props: {
+      post,
+    },
+  };
 }
