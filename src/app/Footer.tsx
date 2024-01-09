@@ -14,7 +14,7 @@ function Footer() {
     const redes = [
         {
             name: 'facebook',
-            ref: "https://www.facebook.com/profile.php?id=61552143745494",
+            ref: "https://www.facebook.com/profile.php?id=61554517451422",
             icon: <RiFacebookCircleLine />,
         },
         {
@@ -24,7 +24,7 @@ function Footer() {
         },
         {
             name: 'tiktok',
-            ref: "",
+            ref: "https://www.tiktok.com/@mampro_ingenieria",
             icon: <IoLogoTiktok />,
         },
         {
